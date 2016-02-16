@@ -1,0 +1,36 @@
+{
+
+	"name": "MyPlugin",
+
+	"version": "1.0",
+
+	"manifest_version": 2,
+
+	"description": "This is a description for my plugin!",
+
+	"permissions":
+	[ 
+		"contextMenus",
+		"*://*/*",
+		"tabs"
+		//"fileSystem": ["write", "retainEntries", "directory"]
+	],
+
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+
+	"icons": {
+		"16": "icon.png"
+	},
+
+	"background": {
+		"scripts": ["jq.min.js", "background.js"]
+	},
+
+
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	}
+
+}
